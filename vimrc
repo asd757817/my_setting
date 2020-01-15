@@ -1,10 +1,14 @@
-source ~/.vim/vundles.vim
+source ~/.vim/plugin.vim
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " 主題設定
 set background=dark
 colorscheme molokai
+
+" Airline
+let g:airline_theme='luna'
+"let g:airline#extensions#tabline#enabled = 1
 
 " 縮排設定
 set autoindent   " 開啟自動縮排
@@ -17,6 +21,10 @@ set expandtab
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+
+let &t_SI = "\e[1 q"
+let &t_EI = "\e[1 q"
+
 set textwidth=120
 set showmatch
 
@@ -28,9 +36,17 @@ set comments=sl:/*,mb:\ *,elx:\ */
 
 " nerdcommentor config
 let g:NERDSpaceDelims=1
-let NERDCompactSexyComs=1
+let NERDCompactSexyComs=0
+
+let g:tmuxline_powerline_separators = 0
 
 " 快捷鍵
 " nmap <F6> :IndentGuidesToggle<cr>
 nmap <F5> :NERDTreeToggle<cr>
 set pastetoggle=<F9>
+
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" Toggle auto formatting:
+nmap <F6> :ClangFormatAutoToggle<CR>
