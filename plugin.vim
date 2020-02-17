@@ -3,9 +3,6 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" required!
-Plug 'gmarik/vundle'
-
 " 程式碼 tab 補齊
 "Plug 'Shougo/neocomplcache'
 "Plug 'ervandew/supertab'
