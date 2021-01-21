@@ -3,20 +3,15 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" 程式碼 tab 補齊
-"Plug 'Shougo/neocomplcache'
-"Plug 'ervandew/supertab'
-"Plug 'zxqfl/tabnine-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" 括號、引號補全
+" Auto complete
+Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
-"Plug 'tpope/vim-surround'
 
 " Code formatter
 Plug 'rhysd/vim-clang-format'
+Plug 'Chiel92/vim-autoformat'
 
-" snippets
+" Snippet 片段
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 " snipmate dependencies
@@ -26,19 +21,17 @@ Plug 'tomtom/tlib_vim'
 " Fast navigation
 Plug 'jwhitley/vim-matchit'
 
-" 註解
+" Commenter
 Plug 'scrooloose/nerdcommenter'
 
-" 排版
+" Typesetting
 Plug 'godlygeek/tabular'
 
+" Show directories
 Plug 'scrooloose/nerdtree'
 
 " Ariline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Tmuxline
-Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
