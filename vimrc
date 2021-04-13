@@ -3,9 +3,9 @@ source ~/.vim/plugin.vim
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " 主題設定
-set background=dark
-colorscheme molokai
 set t_Co=256
+set background=dark
+colorscheme desertink
 
 " Airline
 let g:airline_theme='jellybeans'
@@ -51,7 +51,10 @@ let g:formatters_c = ['allman']
 set pastetoggle=<F9>
 
 " clang-format 
-let g:clang_format#code_style = 'GNU'
+let g:clang_format#code_style = 'WebKit'
+let g:clang_format#style_options = {
+            \ "ColumnLimit": 100 }
+
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
