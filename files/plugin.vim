@@ -1,8 +1,8 @@
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-call plug#begin('~/.vim/plugged')           
 " Auto complete
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
@@ -12,11 +12,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'Chiel92/vim-autoformat'
 
 " Snippet 片段
-Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-" snipmate dependencies
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
 
 " Fast navigation
 Plug 'jwhitley/vim-matchit'
@@ -35,4 +31,4 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 
-call plug#end()
+call plug#end()       
